@@ -1,0 +1,156 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: black;   /* Fondo general negro */
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('https://picsum.photos/1600/900') no-repeat center center/cover;
+  display: flex;
+  align-items: stretch;   /* Asegura que el texto se ajuste a la altura */
+}
+
+.hero-text {
+  width: 50%;             /* Mitad derecha */
+  margin-left: auto;      /* Empuja el bloque hacia la derecha */
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+  background: #111;
+  padding: 50px;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #1da1f2; /* azul estilo Twitter */
+  transform: scale(1.2);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+  .hero-text {
+    width: 100%;           /* En móvil ocupa todo el ancho */
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
+.gallery {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.caption {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+/*Caja de texto de info*/
+.infobox1 {
+    display: flex;
+    justify-content: space-between; /* separa texto e imagen */
+    align-items: center;            /* centra verticalmente */
+    padding: 5%;
+}
+
+/* Caja de texto */
+.infotext {
+    flex: 0 0 70%;              /* ocupa espacio proporcional */
+    margin-right: 10px;   /* separa del borde derecho */
+}
+
+/* Caja de imagen */
+.infoimage {
+    flex: 0 0 30%;              /* ocupa espacio proporcional */
+    display: flex;
+    justify-content: flex-end; /* empuja la imagen a la derecha */
+    align-items: center;
+}
+
+.infoimage img {
+    max-width: 100%;      /* evita que se desborde */
+    height: auto;
+}
